@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Eye Test</title>
+
+<style>
+body{
+background:black;
+color:white;
+text-align:center;
+font-family:sans-serif;
+}
+
+#scare{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+display:none;
+object-fit:cover;
+}
+</style>
+
+<script>
+
+function startTest(){
+
+setTimeout(function(){
+
+document.getElementById("scare").style.display="block";
+
+var audio = new Audio("ghots.mp3");
+audio.play();
+
+},4000);
+
+}
+
+</script>
+
+</head>
+
+<body>
+
+<h1>แบบทดสอบIQ</h1>
+<p>กดเริ่มแล้วรอ5วิ</p>
+
+<button onclick="startTest()">เริ่มทดสอบ</button>
+
+<img id="scare" src="images.jpeg">
+
+</body>
+</html>
